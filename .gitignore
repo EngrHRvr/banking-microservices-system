@@ -1,0 +1,6 @@
+echo "target/
+.idea/
+*.iml
+.settings/
+.project/
+.classpath" > .gitignore
