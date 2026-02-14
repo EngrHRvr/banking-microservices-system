@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/account")
+@RequestMapping("/api")
 public class AccountCreationController {
 
     private final AccountCreationService creationService;
@@ -22,7 +22,7 @@ public class AccountCreationController {
         this.creationService = creationService;
     }
 
-    @PostMapping
+    @PostMapping("/v1/account")
     public ResponseEntity<AccountResponse> createAccount(@Valid @RequestBody AccountRequest request) {
         AccountResponse response = creationService.createCustomerAccount(request);
         return new ResponseEntity<>(response, HttpStatus.CREATED);

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/account")
+@RequestMapping("/api")
 public class CustomerInquiryController {
 
     private final CustomerInquiryService customerInquiryService;
@@ -19,7 +19,7 @@ public class CustomerInquiryController {
         this.customerInquiryService = customerInquiryService;
     }
 
-    @GetMapping("/{customerNumber}")
+    @GetMapping("/v1/account/{customerNumber}")
     public ResponseEntity<CustomerInquiryResponse> getCustomer(@PathVariable Long customerNumber) {
         CustomerInquiryResponse response = customerInquiryService.getCustomerDetails(customerNumber);
         HttpStatus status = response.getTransactionStatusCode() == 302 ?
