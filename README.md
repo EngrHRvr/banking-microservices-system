@@ -44,7 +44,7 @@ Start Customer Inquiry Service:
 - Run mvn spring-boot:run
 
 API Documentation
-A. Account Creation (Port 8081)
+- A. Account Creation (Port 8081)
 Endpoint: POST /api/v1/account
 
 Sample Payload:
@@ -63,10 +63,10 @@ Logic: If the email exists, it adds a new account to the existing customer. If n
 
 Validation: Supports 'S' (Savings) and 'C' (Checking). Invalid types return a 400 Error.
 
-B. Customer Inquiry (Port 8082)
+- B. Customer Inquiry (Port 8082)
 Endpoint: GET /api/v1/customer/{customerNumber}
 
-Success Response (302 Found):
+- Success Response (302 Found):
 
 JSON
 {
@@ -79,7 +79,7 @@ JSON
     "transactionStatusDescription": "Customer Account found"
 }
 
-Failed Response (401)
+- Failed Response (401)
 
 JSON
 {
@@ -91,11 +91,11 @@ JSON
 Database Management
 You can view the data in real-time via the H2 Console:
 
-URL: http://localhost:8081/h2-console
+- URL: http://localhost:8081/h2-console
 
-JDBC URL: jdbc:h2:tcp://localhost:9092/~/accountdb
+- JDBC URL: jdbc:h2:tcp://localhost:9092/~/accountdb
 
-Credentials: sa / password
+- Credentials: sa / password
 
 Testing
 Unit tests are implemented using JUnit 4 and Mockito. To run tests for both services:
