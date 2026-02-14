@@ -23,8 +23,8 @@ Getting Started
 1. Installation
 Clone the repository to your local machine:
 
-git clone https://github.com/your-username/banking-microservices-system.git
-cd banking-microservices
+- git clone https://github.com/your-username/banking-microservices-system.git
+- cd banking-microservices
 
 2. Running the Services (Important Order!)
 Because the Account Creation Service hosts the database server, it must be started first.
